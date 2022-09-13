@@ -14,5 +14,5 @@ class Solution:
         char_count["l"] = int(char_count["l"]/2)
         char_count["o"] = int(char_count["o"]/2)
         
-        return min(list(char_count.values()))
+        return min(char_count.values())
         
