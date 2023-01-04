@@ -1,11 +1,12 @@
 from collections import defaultdict
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-      seen = {}
-      for word in strs:
-        rearranged_word = "".join(sorted(word))
-        if rearranged_word in seen:
-          seen[rearranged_word].append(word)
-        else:
-          seen[rearranged_word] = [word]
-      return list(seen.values())
+        string_dict = {}
+        for string in strs:
+            converted = "".join(sorted(string))
+            if converted not in string_dict:
+                string_dict[converted] = [string]
+            else:
+                string_dict[converted].append(string)
+        return list(string_dict.values())
+                    
